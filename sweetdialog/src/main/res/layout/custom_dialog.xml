@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="fill_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="15dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"/>
+
+    <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/dark"
+            android:layout_marginTop="15dp"
+            android:text="ihuul"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    <TextView
+            android:id="@+id/txtMessage"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/dark"
+            android:text="You finish all the game."
+            android:textSize="14sp"/>
+
+    <com.felixsoares.sweetdialog.AnimatingProgressBar
+            android:id="@+id/progress"
+            android:layout_marginTop="10dp"
+            android:indeterminate="false"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnNegative"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:text="No"/>
+
+        <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnPositive"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:text="Yes"/>
+
+    </LinearLayout>
+
+</LinearLayout>
