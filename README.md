@@ -3,7 +3,7 @@
 
 # SweetDialog
 
-![](https://img.shields.io/badge/SDK-19+-success.svg) ![](https://img.shields.io/badge/Version-1.0-blue.svg)
+![](https://img.shields.io/badge/SDK-19+-success.svg) ![](https://img.shields.io/badge/Version-1.1-blue.svg)
 
 ### Getting Started
 
@@ -22,9 +22,71 @@ Add the dependency in build.gradle (App module)
 
 ```gradle
 dependencies {
-	implementation 'com.github.felixsoares:SweetDialog:1.0'
+	implementation 'com.github.felixsoares:SweetDialog:1.1'
 }
 ```
+
+### Documentation
+
+1) Options.
+
+```kotlin
+SweetDialog()
+	.setTitle("Lorem ipsum") // Title
+	.setMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec magna diam.") // Message
+	.setCancellable(false) // Can user close on back ?
+	.setPositiveColor(android.R.color.holo_orange_dark) // Color of background positive button
+	.setPositiveTextColor(R.color.black) // Color of text positive button 
+	.setPositiveText("Positive =)") // Text of positive button
+	.onPositiveClick { dialog -> 
+		dialog.dismiss() // Click in positie button
+	}
+	.setNegativeColor(R.color.black) // Color of background negative button
+	.setNegativeTextColor(R.color.red) // Color of text negative button
+	.setNegativeText("Negative =(") // Text of negative button 
+	.onNegativeClick { dialog ->
+		dialog.dismiss() // Click in negative button
+	}
+	.setTimer(5000) // Timeout of dialog close
+	.setType(SweetDialog.Type.SUCCESS) // Type of dialog
+	.setAnimation(SweetDialog.Animation.IN_TO_OUT) // Set enter exit animation
+	.show(this)
+```
+
+2) All configurations are optionals.
+
+```kotlin
+SweetDialog()
+	.setTitle("Lorem ipsum")
+	.setAnimation(SweetDialog.Animation.IN_TO_OUT)
+	.show(this)
+```
+
+3) Types.
+
+```kotlin
+SweetDialog.Type.DEFAULT
+SweetDialog.Type.SUCCESS
+SweetDialog.Type.ERROR
+SweetDialog.Type.DANGER
+```
+
+4) Animations.
+
+```kotlin
+SweetDialog.Animation.TOP_TO_BOTTOM
+SweetDialog.Animation.TOP_TO_TOP
+SweetDialog.Animation.BOTTOM_TO_BOTTOM
+SweetDialog.Animation.BOTTOM_TO_TOP
+SweetDialog.Animation.LEFT_TO_RIGHT
+SweetDialog.Animation.LEFT_TO_LEFT
+SweetDialog.Animation.RIGHT_TO_LEFT
+SweetDialog.Animation.RIGTH_TO_RIGHT
+SweetDialog.Animation.FADE
+SweetDialog.Animation.BOUNCE
+SweetDialog.Animation.IN_TO_OUT
+```
+
 
 MIT License
 
