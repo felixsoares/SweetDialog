@@ -5,6 +5,8 @@
 
 ![](https://img.shields.io/badge/SDK-19+-success.svg) ![](https://img.shields.io/badge/Version-1.1-blue.svg)
 
+![](https://media.giphy.com/media/Mdk3lQb5kzU5OxeqHD/giphy.gif)
+
 ### Getting Started
 
 Add it in your root build.gradle (Project module)
