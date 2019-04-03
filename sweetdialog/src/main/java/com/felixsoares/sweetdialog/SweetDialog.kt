@@ -144,7 +144,6 @@ class SweetDialog {
         )
 
         setupImage(dialog.findViewById(R.id.lottie))
-        //closeInXMiliseconds(dialog)
         closeDialog(dialog)
 
         dialog.show()
@@ -200,10 +199,10 @@ class SweetDialog {
                 R.style.right_to_right
             }
             Animation.TOP_TO_BOTTOM -> {
-                R.style.up_to_bottom
+                R.style.top_to_bottom
             }
             Animation.TOP_TO_TOP -> {
-                R.style.up_to_up
+                R.style.top_to_top
             }
             Animation.BOTTOM_TO_BOTTOM -> {
                 R.style.bottom_to_bottom

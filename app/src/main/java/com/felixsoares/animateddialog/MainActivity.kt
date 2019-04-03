@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
             SweetDialog()
                 .setTitle("Lorem ipsum")
                 .setMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec magna diam.")
-                .setType(SweetDialog.Type.ERROR)
+                .setType(SweetDialog.Type.DANGER)
                 .show(this)
         }
 
@@ -101,7 +101,7 @@ class MainActivity : AppCompatActivity() {
             SweetDialog()
                 .setTitle("Lorem ipsum")
                 .setMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec magna diam.")
-                .setType(SweetDialog.Type.DANGER)
+                .setType(SweetDialog.Type.ERROR)
                 .show(this)
         }
 
@@ -182,6 +182,14 @@ class MainActivity : AppCompatActivity() {
                 .setTitle("Lorem ipsum")
                 .setMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec magna diam.")
                 .setAnimation(SweetDialog.Animation.TOP_TO_BOTTOM)
+                .show(this)
+        }
+
+        btn19.setOnClickListener {
+            SweetDialog()
+                .setTitle("Lorem ipsum")
+                .setMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec magna diam.")
+                .setAnimation(SweetDialog.Animation.FADE)
                 .show(this)
         }
     }
