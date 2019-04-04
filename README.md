@@ -49,7 +49,7 @@ SweetDialog()
 	.onNegativeClick { dialog ->
 		dialog.dismiss() // Click in negative button
 	}
-	.setTimer(5000) // Timeout of dialog close
+	.setTimer(5000) // Timeout of dialog close in millis
 	.setType(SweetDialog.Type.SUCCESS) // Type of dialog
 	.setAnimation(SweetDialog.Animation.IN_TO_OUT) // Set enter exit animation
 	.show(this)
@@ -87,6 +87,22 @@ SweetDialog.Animation.RIGTH_TO_RIGHT
 SweetDialog.Animation.FADE
 SweetDialog.Animation.BOUNCE
 SweetDialog.Animation.IN_TO_OUT
+```
+
+5) Progress in countdown.
+
+```kotlin
+SweetDialog()
+    .setTimer(5000) // By default is invisible
+    .show(this)
+
+
+SweetDialog()
+    .setTimer(5000, SweetDialog.Progress.VISIBLE)
+    .show(this)
+
+SweetDialog.Progress.VISIBLE
+SweetDialog.Progress.INVISIBLE
 ```
 
 

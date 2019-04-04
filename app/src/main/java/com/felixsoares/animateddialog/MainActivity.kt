@@ -76,7 +76,17 @@ class MainActivity : AppCompatActivity() {
                 .setTitle("Lorem ipsum")
                 .setMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec magna diam.")
                 .setCancellable(false)
-                .setTimer(5000)
+                .setTimer(2000)
+                .show(this)
+        }
+
+        btn20.setOnClickListener {
+
+            SweetDialog()
+                .setTitle("Lorem ipsum")
+                .setMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec magna diam.")
+                .setCancellable(false)
+                .setTimer(5000, SweetDialog.Progress.VISIBLE)
                 .show(this)
         }
 

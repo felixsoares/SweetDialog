@@ -31,12 +31,17 @@ class SweetDialog {
     private var animation = Animation.IN_TO_OUT
     private var cancellable = true
     private var type = Type.DEFAULT
+    private var showProgress = Progress.INVISIBLE
 
     private var positiveCallback: ((Dialog) -> Unit)? = null
     private var negativeCallback: ((Dialog) -> Unit)? = null
 
     enum class Type {
         DEFAULT, SUCCESS, ERROR, DANGER
+    }
+
+    enum class Progress {
+        VISIBLE, INVISIBLE
     }
 
     enum class Animation {
@@ -63,7 +68,12 @@ class SweetDialog {
     }
 
     fun setTimer(timer: Long): SweetDialog {
+        return setTimer(timer, Progress.INVISIBLE)
+    }
+
+    fun setTimer(timer: Long, showProgress: Progress): SweetDialog {
         this.timeToClose = timer
+        this.showProgress = showProgress
         return this
     }
 
@@ -153,7 +163,13 @@ class SweetDialog {
         val progress = dialog.findViewById<ProgressBar>(R.id.progress)
 
         if (timeToClose != null) {
-            progress.visibility = View.VISIBLE
+
+            if (showProgress == Progress.VISIBLE) {
+                progress.visibility = View.VISIBLE
+            } else {
+                progress.visibility = View.GONE
+            }
+
             progress.max = timeToClose!!.toInt()
 
             object : CountDownTimer(timeToClose!!, 1000) {
@@ -167,14 +183,6 @@ class SweetDialog {
             }.start()
         } else {
             progress.visibility = View.GONE
-        }
-    }
-
-    private fun closeInXMiliseconds(dialog: Dialog) {
-        if (timeToClose != null) {
-            Handler().postDelayed({
-                dialog.dismiss()
-            }, timeToClose!!)
         }
     }
 
