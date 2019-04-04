@@ -3,7 +3,7 @@
 
 # SweetDialog
 
-![](https://img.shields.io/badge/SDK-19+-success.svg) ![](https://img.shields.io/badge/Version-1.1-blue.svg)
+![](https://img.shields.io/badge/SDK-19+-success.svg) ![](https://img.shields.io/badge/Version-1.2-blue.svg)
 
 ![](https://media.giphy.com/media/Mdk3lQb5kzU5OxeqHD/giphy.gif)
 
@@ -24,7 +24,7 @@ Add the dependency in build.gradle (App module)
 
 ```gradle
 dependencies {
-	implementation 'com.github.felixsoares:SweetDialog:1.1'
+	implementation 'com.github.felixsoares:SweetDialog:1.2'
 }
 ```
 
